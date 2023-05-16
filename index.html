@@ -10,33 +10,61 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- Custom CSS -->
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
-        #container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 1rem;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        section {
-            margin-bottom: 2rem;
-        }
-        h1, h2 {
-            margin-bottom: 1rem;
-        }
-        p {
-            margin-bottom: 1rem;
-        }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f8f9fa; /* Adding a light grey background */
+    }
+    #container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+    header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    section {
+        margin-bottom: 2rem;
+        padding: 1rem; /* Adding padding to sections */
+        background-color: #ffffff; /* Adding a white background to sections */
+        border-radius: 5px; /* Adding rounded corners to sections */
+    }
+    h1, h2 {
+        margin-bottom: 1rem;
+    }
+    p {
+        margin-bottom: 1rem;
+    }
+    a {
+        color: #007bff; /* Changing link color */
+        text-decoration: none; /* Removing underline from links */
+    }
+    a:hover {
+        color: #0056b3; /* Changing link color on hover */
+    }
+    button {
+        background-color: #007bff; /* Changing button color */
+        color: #ffffff; /* Changing button text color */
+        border: none; /* Removing button border */
+        padding: 10px 20px; /* Adding padding to button */
+        text-align: center; /* Centering button text */
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s; /* Adding transition for hover effect */
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3; /* Changing button color on hover */
+        color: white;
+    }
     </style>
 </head>
 <body>
@@ -66,7 +94,7 @@
                 To learn more about my professional experience and skills, please download my resume by clicking the button below.
             </p>
             <p>
-                <a href="https://josesim.github.io/pdf/JoseSimon_Resume.pdf" download="JoseSimon_Resume.pdf"><button>Download Resume</button></a>
+                <a href="https://josesim.github.io/pdf/JoseSimon_Resume.pdf" target="_blank"><button>View Resume</button></a>
             </p>
         </section>
         
@@ -79,6 +107,31 @@
             <p>Email: <a href="mailto:jose.simon@ufl.edu">jose.simon@ufl.edu</a></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/jose-alberto-simon" target="_blank">linkedin.com/in/jose-alberto-simon</a></p>
             <p>GitHub: <a href="https://github.com/josesim" target="_blank">github.com/josesim</a></p>
+        <!-- Contact Form -->
+            <h3>Or send me a message:</h3>       
+            <form action="https://formsubmit.co/jose.simon@ufl.edu" method="POST">
+                
+                <label for="fullname">Full Name</label><br>
+                <input type="text" id="fullname" name="fullname" required><br>
+            
+                <label for="email">Email Address</label><br>
+                <input type="email" id="email" name="email" required><br>
+            
+                <label for="message">Your Message</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br>
+            
+                <!-- Prevent form submissions from bots -->
+                <input type="hidden" name="_captcha" value="false">
+            
+                <!-- Specify the email subject -->
+                <input type="hidden" name="_subject" value="New submission from portfolio website!">
+            
+                <!-- Specify the success page -->
+                <input type="hidden" name="_next" value="https://josesim.github.io/thank-you.html">
+            
+                <input type="submit" value="Submit">
+            </form>
+        </section>
         </section>
     </div>
 </body>
